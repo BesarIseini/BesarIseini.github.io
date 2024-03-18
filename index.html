@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phonestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="nav-div">
+            <ul class="nav-list">
+                <li>
+                    <a href="/pages/computers.html">Computers</a>
+                </li>
+                <li>
+                    <a href="/pages/computer_parts.html">Computer Parts</a>
+                </li>
+                <li>
+                    <a href="/pages/laptops.html">Laptops</a>
+                </li>
+                <li>
+                    <a href="/pages/accesories.html">Accesories</a>
+                </li>
+                <li>
+                    <a href="/pages/phones.html">Phones</a>
+                </li>
+                <li>
+                    <a href="/pages/TV.html">TVs</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-home">
+            <a href="/index.html">
+                <i class="fas fa-home fa-lg active"></i>
+            </a>
+        </div>
+        <div class="nav-cart">
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+            <a href="/pages/cart.html">Cart <b id="cartNum">(1)</b></a>
+        </div>
+    </nav>
+    <div class="topnav">
+        <a href="/index.html">
+            <i class="fas fa-home fa-lg active"></i>
+        </a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+                    <a href="/pages/computers.html">Computers</a>
+                    <a href="/pages/computer_parts.html">Computer Parts</a>
+                    <a href="/pages/laptops.html">Laptops</a>
+                    <a href="/pages/accesories.html">Accesories</a>
+                    <a href="/pages/phones.html">Phones</a>
+                    <a href="/pages/TV.html">TVs</a>
+                    <a href="/pages/cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+
+
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <article>
+        <div class="websiteContent blur-transparent promotions-content">
+            <div class="product-right">
+                <h2 style="text-align: center;">Exciting News Unveiled: RTX 4090 is Here!</h2>
+                <div class="product-info">
+                    <img src="/images/promotions/rtx4090.jpg"  alt="rtx4090" class="phone2">
+                    <div style="max-width: 500px">
+                        <p>
+                            Brace yourselves, gamers and creators! The powerhouse you've been waiting for has finally arrived - introducing 
+                            the revolutionary NVIDIA RTX 4090! 
+                        </p>
+                        <p>
+                            Unleash Unprecedented Power:
+                            Featuring groundbreaking architecture, the RTX 4090 delivers unparalleled performance for the most 
+                            demanding tasks and next-gen gaming experiences. Elevate your creativity and conquer the virtual world like never before!
+                        </p>
+                        <button class="promotion-button">
+                            Click for more!
+                        </button>
+                    </div>
+                    <img src="/images/promotions/rtx4090.jpg"  alt="rtx4090" class="phone1">
+                </div>
+            </div>
+            <div class="product-right">
+                <h2 style="text-align: center;">Introducing the S24: Elevate Your Experience!</h2>
+                <div class="product-info">
+                    <img src="/images/promotions/s24.jpg"  alt="s24">
+                    <div style="max-width: 500px; margin-left: 20px;">
+                        <p>
+                            Unleash a new level of performance and innovation with the all-new S24 where cutting-edge technology meets sleek design! 
+                        </p>
+                        <p>
+                            Get ready to experience a new era of performance and style with the S24. Elevate your world, upgrade your view! 
+                        </p>
+                        <button class="promotion-button">
+                            Click for more!
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="product-right">
+                <h2 style="text-align: center;">Unleash the Powerhouse: Introducing the Intel Core i9-14900K!</h2>
+                <div class="product-info">
+                    <img src="/images/promotions/i9-14900K.jpg" alt="rtx4090" class="phone2">
+                    <div style="max-width: 500px">
+                        <p>
+                            Brace yourself for a new era of performance with the Intel Core i9-14900K - where speed, power, and innovation collide!
+                        </p>
+                        <p>
+                            To celebrate the arrival of the i9-14900K, we're offering exclusive launch promotions! Be among the first to experience the next level of computing with special deals, bundled offers, and more. Don't miss out on this opportunity to upgrade your system.
+                        </p>
+                        <p>
+                            Upgrade your computing experience with the Intel Core i9-14900K. Unleash the beast within your system and redefine what's possible. Your journey to unparalleled performance starts here!
+                        </p>
+                        <button class="promotion-button">
+                            Click for more!
+                        </button>
+                    </div>
+                    <img src="/images/promotions/i9-14900K.jpg" alt="rtx4090" class="phone1">
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="/dist/main.js"></script>
+    <script src="/dist/phoneCSS.js"></script>
+</body>
+</html>

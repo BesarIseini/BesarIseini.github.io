@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { padding: 0; margin: 0; }
+            html, body, #fullheight {
+                        min-height: 100% !important;
+                        height: 100%;
+            }
+        .div {
+            background-color: darkred;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            margin-left: 50px;
+        width: 180px;
+        aspect-ratio: 8;
+        background: radial-gradient(circle closest-side,#ffffff 90%,#ffffff00) 0/calc(100%/5) 100% space;
+        clip-path: inset(0 100% 0 0);
+        animation: l1 2s steps(7) infinite;
+        }
+
+        @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+    </style>
+</head>
+<body>
+    <div class="div">
+        <article>
+            <div class="loader"></div>
+            <h1 style="color: white; margin-top: 5px;">Shpejt do ecni nga uebfaqja!</h1>
+        </article>
+        
+    </div>
+    <script>
+            setTimeout(() => {
+                window.location.href = ("https://www.google.com/")
+                
+            }, 6000);
+
+    </script>
+</body>
+</html>

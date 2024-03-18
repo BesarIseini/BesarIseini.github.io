@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/cart.css">
+    <link rel="stylesheet" href="/phonestyle.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-div">
+            <ul class="nav-list">
+                <li>
+                    <a href="/pages/computers.html">Computers</a>
+                </li>
+                <li>
+                    <a href="/pages/computer_parts.html">Computer Parts</a>
+                </li>
+                <li>
+                    <a href="/pages/laptops.html">Laptops</a>
+                </li>
+                <li>
+                    <a href="/pages/accesories.html">Accesories</a>
+                </li>
+                <li>
+                    <a href="/pages/phones.html">Phones</a>
+                </li>
+                <li>
+                    <a href="/pages/TV.html">TVs</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-home">
+            <a href="/index.html">
+                <i class="fas fa-home fa-lg"></i>
+            </a>
+        </div>
+        <div class="nav-cart">
+            <i class="fa-sharp fa-solid fa-cart-shopping active"></i>
+            <a href="/pages/cart.html" class="active">Cart <b id="cartNum">(1)</b></a>
+        </div>
+    </nav>
+    <div class="topnav">
+        <a href="/index.html">
+            <i class="fas fa-home fa-lg"></i>
+        </a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+                    <a href="/pages/computers.html">Computers</a>
+                    <a href="/pages/computer_parts.html">Computer Parts</a>
+                    <a href="/pages/laptops.html">Laptops</a>
+                    <a href="/pages/accesories.html">Accesories</a>
+                    <a href="/pages/phones.html">Phones</a>
+                    <a href="/pages/TV.html">TVs</a>
+                    <a href="/pages/cart.html" class="active"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+
+
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <article class="cart-article">
+        <div class="CartContainer">
+            <div class="Header">
+                <h3 class="Heading">Shopping Cart</h3>
+                <div>
+                    <label for="" style="color: black;">Use Euros</label>
+                    <label class="switch">
+                        <input type="checkbox" id="euroCheck">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <h5 class="Action" onclick="removeAll()">Remove all</h5>
+            </div>
+            
+            <div id="cartItems">
+                <div class="Cart-Items">
+                    <div class="image-box">
+                        <img src="images/apple.png" style="height: 120px"  />
+                    </div>
+                    <div class="about">
+                        <h1 class="title">Apple Juice</h1>
+                        <h3 class="subtitle">250ml</h3>
+                        <img src="images/veg.png" style="height: 30px;"/>
+                    </div>
+                    <!-- <div class="counter">
+                        <div class="btn"></div> -->
+                        <!-- <div class="count"></div> -->
+                        <!-- <div class="btn"></div>
+                    </div> -->
+                    <div class="prices">
+                        <div class="amount">$2.99</div>
+                        <div class="save"><u>Save for later</u></div>
+                        <div class="remove"><u>Remove</u></div>
+                    </div>
+              </div>
+            </div>
+            <!-- <div> -->
+                <!-- <div class="nothing-container">
+
+                    <div class="nothing">
+                        <h3 class="nothing-text">You have nothing in your cart.</h3>
+                    </div>
+                </div> -->
+                <!-- <div class="counter">
+                    <div class="btn"></div> -->
+                    <!-- <div class="count"></div> -->
+                    <!-- <div class="btn"></div>
+                </div> -->
+            <!-- </div> -->
+
+  
+            <!-- <div class="Cart-Items pad">
+                  <div class="image-box">
+                      <img src="images/grapes.png" style="height: 120px;" />
+                  </div>
+                  <div class="about">
+                      <h1 class="title">Grapes Juice</h1>
+                      <h3 class="subtitle">250ml</h3>
+                      <img src="images/veg.png" style="height: 30px;"/>
+                  </div>
+                  <div class="counter">
+                      <div class="btn">+</div>
+                      <div class="count">1</div>
+                      <div class="btn">-</div>
+                  </div>
+                  <div class="prices">
+                      <div class="amount">$3.19</div>
+                      <div class="save"><u>Save for later</u></div>
+                      <div class="remove"><u>Remove</u></div>
+                  </div>
+            </div> -->
+          <hr> 
+          <div class="checkout">
+          <div class="total">
+              <div>
+                  <div class="Subtotal">Sub-Total</div>
+                  <div class="items"><span id="totalItems">2</span> items</div>
+              </div>
+              <div class="total-amount" id="totalPrice">$6.18</div>
+          </div>
+          <button class="button" onclick="preCheckout()">Checkout</button></div>
+    </article>
+    <script src="/dist/main.js"></script>
+    <script src="/dist/cart.js"></script>
+    <script src="/dist/phoneCSS.js"></script>
+
+</body>
+</html>
