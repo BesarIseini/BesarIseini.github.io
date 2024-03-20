@@ -62,8 +62,8 @@ function test() {
             .then((json) => TVs.push(...json));
         displayTVs = [...TVs];
         displayTV();
-        const min = Math.min(...TVs.map(item => +item.price));
-        const max = Math.max(...TVs.map(item => +item.price));
+        const min = Math.min(...TVs.map(item => +item.price)) - 1;
+        const max = Math.max(...TVs.map(item => +item.price)) + 1;
         sliderOne.setAttribute('max', String(max));
         sliderTwo.setAttribute('max', String(max));
         sliderOne.setAttribute('min', String(min));
@@ -84,6 +84,16 @@ sliderOne.addEventListener('click', event => {
     filterPrice();
 });
 sliderTwo.addEventListener('click', event => {
+    settings.min = +sliderOne.value;
+    settings.max = +sliderTwo.value;
+    filterPrice();
+});
+sliderOne.addEventListener('change', event => {
+    settings.min = +sliderOne.value;
+    settings.max = +sliderTwo.value;
+    filterPrice();
+});
+sliderTwo.addEventListener('change', event => {
     settings.min = +sliderOne.value;
     settings.max = +sliderTwo.value;
     filterPrice();

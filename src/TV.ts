@@ -71,8 +71,8 @@ async function test() {
     displayTVs = [...TVs]
     displayTV()
 
-    const min = Math.min(...TVs.map(item => +item.price))
-    const max = Math.max(...TVs.map(item => +item.price))
+    const min = Math.min(...TVs.map(item => +item.price)) - 1
+    const max = Math.max(...TVs.map(item => +item.price)) + 1
 
     
     sliderOne.setAttribute('max', String(max))
@@ -106,6 +106,20 @@ sliderTwo.addEventListener('click', event => {
 
 })
 
+sliderOne.addEventListener('change', event => {
+    // alert('test')
+    settings.min = +sliderOne.value
+    settings.max = +sliderTwo.value
+    filterPrice()
+})
+
+
+sliderTwo.addEventListener('change', event => {
+    settings.min = +sliderOne.value
+    settings.max = +sliderTwo.value
+    filterPrice()
+
+})
 
 
 // displayTV()

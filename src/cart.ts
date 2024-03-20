@@ -37,8 +37,8 @@ function generateCart() {
                     </div>
                     <div class="prices">
                         <div class="amount">${settings.prefix}${(+currentArr[i].price / settings.divide).toFixed(settings.tofixed)}${settings.postfix}</div>
-                        <div class="save"><u>Save for later</u></div>
-                        <div class="remove"><u onclick="removeItem(${i})">Remove</u></div>
+                        <div class="save"><u>${settings.currentLanguage.cart.saveForLater}</u></div>
+                        <div class="remove"><u onclick="removeItem(${i})">${settings.currentLanguage.cart.remove}</u></div>
                     </div>
         </div>
         ${hr}
@@ -50,7 +50,7 @@ function generateCart() {
         <div class="nothing-container">
 
                     <div class="nothing">
-                        <h3 class="nothing-text">You have nothing in your cart.</h3>
+                        <h3 class="nothing-text">${settings.currentLanguage.cart.nothing}</h3>
                     </div>
                 </div>
                 `

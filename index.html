@@ -16,22 +16,22 @@
         <div class="nav-div">
             <ul class="nav-list">
                 <li>
-                    <a href="/pages/computers.html">Computers</a>
+                    <a href="/pages/computers.html" id="computer">Computers</a>
                 </li>
                 <li>
-                    <a href="/pages/computer_parts.html">Computer Parts</a>
+                    <a href="/pages/computer_parts.html" id="parts">Computer Parts</a>
                 </li>
                 <li>
-                    <a href="/pages/laptops.html">Laptops</a>
+                    <a href="/pages/laptops.html" id="laptops">Laptops</a>
                 </li>
                 <li>
-                    <a href="/pages/accesories.html">Accesories</a>
+                    <a href="/pages/accesories.html" id="accesories">Accesories</a>
                 </li>
                 <li>
-                    <a href="/pages/phones.html">Phones</a>
+                    <a href="/pages/phones.html" id="phone">Phones</a>
                 </li>
                 <li>
-                    <a href="/pages/TV.html">TVs</a>
+                    <a href="/pages/TV.html" id="TVs">TVs</a>
                 </li>
             </ul>
         </div>
@@ -41,8 +41,10 @@
             </a>
         </div>
         <div class="nav-cart">
-            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="/pages/cart.html">Cart <b id="cartNum">(1)</b></a>
+            
+            <a href="/pages/cart.html">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i><span id="cart">Cart</span> <b id="cartNum">(1)</b>
+            </a>
         </div>
     </nav>
     <div class="topnav">
@@ -61,23 +63,22 @@
 
 
         </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
-      </div>
+    </div>
     <article>
         <div class="websiteContent blur-transparent promotions-content">
             <div class="product-right">
-                <h2 style="text-align: center;">Exciting News Unveiled: RTX 4090 is Here!</h2>
+                <h2 style="text-align: center;" id="nvidiaPromotionTitle">Exciting News Unveiled: RTX 4090 is Here!</h2>
                 <div class="product-info">
                     <img src="/images/promotions/rtx4090.jpg"  alt="rtx4090" class="phone2">
                     <div style="max-width: 500px">
-                        <p>
+                        <p id="nvidiaPromotionP1">
                             Brace yourselves, gamers and creators! The powerhouse you've been waiting for has finally arrived - introducing 
                             the revolutionary NVIDIA RTX 4090! 
                         </p>
-                        <p>
+                        <p id="nvidiaPromotionP2">
                             Unleash Unprecedented Power:
                             Featuring groundbreaking architecture, the RTX 4090 delivers unparalleled performance for the most 
                             demanding tasks and next-gen gaming experiences. Elevate your creativity and conquer the virtual world like never before!
@@ -90,14 +91,14 @@
                 </div>
             </div>
             <div class="product-right">
-                <h2 style="text-align: center;">Introducing the S24: Elevate Your Experience!</h2>
+                <h2 style="text-align: center;" id="s24PromotionTitle">Introducing the S24: Elevate Your Experience!</h2>
                 <div class="product-info">
                     <img src="/images/promotions/s24.jpg"  alt="s24">
                     <div style="max-width: 500px; margin-left: 20px;">
-                        <p>
+                        <p id="s24PromotionP1">
                             Unleash a new level of performance and innovation with the all-new S24 where cutting-edge technology meets sleek design! 
                         </p>
-                        <p>
+                        <p id="s24PromotionP2">
                             Get ready to experience a new era of performance and style with the S24. Elevate your world, upgrade your view! 
                         </p>
                         <button class="promotion-button">
@@ -108,17 +109,17 @@
                 </div>
             </div>
             <div class="product-right">
-                <h2 style="text-align: center;">Unleash the Powerhouse: Introducing the Intel Core i9-14900K!</h2>
+                <h2 style="text-align: center;" id="intelPromotionTitle">Unleash the Powerhouse: Introducing the Intel Core i9-14900K!</h2>
                 <div class="product-info">
                     <img src="/images/promotions/i9-14900K.jpg" alt="rtx4090" class="phone2">
                     <div style="max-width: 500px">
-                        <p>
+                        <p id="intelPromotionP1">
                             Brace yourself for a new era of performance with the Intel Core i9-14900K - where speed, power, and innovation collide!
                         </p>
-                        <p>
+                        <p id="intelPromotionP2">
                             To celebrate the arrival of the i9-14900K, we're offering exclusive launch promotions! Be among the first to experience the next level of computing with special deals, bundled offers, and more. Don't miss out on this opportunity to upgrade your system.
                         </p>
-                        <p>
+                        <p id="intelPromotionP3">
                             Upgrade your computing experience with the Intel Core i9-14900K. Unleash the beast within your system and redefine what's possible. Your journey to unparalleled performance starts here!
                         </p>
                         <button class="promotion-button">
@@ -131,6 +132,7 @@
         </div>
     </article>
     <script src="/dist/main.js"></script>
+    <script src="/dist/language.js"></script>
     <script src="/dist/phoneCSS.js"></script>
 </body>
 </html>

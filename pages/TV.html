@@ -17,33 +17,35 @@
         <div class="nav-div">
             <ul class="nav-list">
                 <li>
-                    <a href="/pages/computers.html">Computers</a>
+                    <a href="/pages/computers.html" id="computer">Computers</a>
                 </li>
                 <li>
-                    <a href="/pages/computer_parts.html">Computer Parts</a>
+                    <a href="/pages/computer_parts.html" id="parts">Computer Parts</a>
                 </li>
                 <li>
-                    <a href="/pages/laptops.html">Laptops</a>
+                    <a href="/pages/laptops.html" id="laptops">Laptops</a>
                 </li>
                 <li>
-                    <a href="/pages/accesories.html">Accesories</a>
+                    <a href="/pages/accesories.html" id="accesories">Accesories</a>
                 </li>
                 <li>
-                    <a href="/pages/phones.html">Phones</a>
+                    <a href="/pages/phones.html" id="phone">Phones</a>
                 </li>
                 <li>
-                    <a href="/pages/TV.html" class="active">TVs</a>
+                    <a href="/pages/TV.html" id="TVs">TVs</a>
                 </li>
             </ul>
         </div>
         <div class="nav-home">
             <a href="/index.html">
-                <i class="fas fa-home fa-lg"></i>
+                <i class="fas fa-home fa-lg active"></i>
             </a>
         </div>
         <div class="nav-cart">
-            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            <a href="/pages/cart.html">Cart <b id="cartNum">(1)</b></a>
+            
+            <a href="/pages/cart.html">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i><span id="cart">Cart</span> <b id="cartNum">(1)</b>
+            </a>
         </div>
     </nav>
     <div class="topnav">
@@ -70,16 +72,16 @@
         <div class="websiteContent">
             <div class="filters">
                 <div>
-                    <h1>Pages</h1>
+                    <h1 id="pagesText">Pages</h1>
                     <div id="pageElem">
                         <button>1</button>
                         <button>2</button>
                     </div>
                 </div>
                 <div>
-                    <h1>Filters</h1>
+                    <h1 id="filtersText">Filters</h1>
                     <form>
-                        <h3>Manufactures</h2>
+                        <h3 id="manufacturerText">Manufactures</h2>
                         <label for="vivax">Vivax</label>
                         <input type="checkbox" name="vivax" id="vivax" class="selectTV"> <br>
                         <label for="favorit">Favorit</label>
@@ -97,7 +99,7 @@
                     </form>
 
                     <br>
-                    <label for="">Use Euros</label>
+                    <label for="" id="useEuros">Use Euros</label>
                     <label class="switch">
                         <input type="checkbox" id="euroCheck">
                         <span class="slider round"></span>
@@ -164,6 +166,7 @@
         </div>
     </div>
     <script src="/dist/main.js"></script>
+    <script src="/dist/language.js"></script>
     <script src="/dist/TV.js"></script>
     <script src="/dist/phoneCSS.js"></script>
 

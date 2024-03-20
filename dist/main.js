@@ -1,4 +1,52 @@
 "use strict";
+const textDEMO = {
+    promotions: {
+        nvidia: {
+            title: "",
+            p1: "",
+            p2: ""
+        },
+        s24: {
+            title: "",
+            p1: "",
+            p2: ""
+        },
+        intel: {
+            title: "",
+            p1: "",
+            p2: "",
+            p3: ""
+        },
+        button: ""
+    },
+    navigation: {
+        computer: "",
+        parts: "",
+        laptops: "",
+        accesories: "",
+        phone: "",
+        TVs: "",
+        cart: ""
+    },
+    products: {
+        page: "",
+        filter: "",
+        manufacturer: "",
+        useEuros: "",
+        viewItem: "",
+        addToCart: ""
+    },
+    cart: {
+        shoppingCart: "",
+        removeAll: "",
+        remove: "",
+        saveForLater: "",
+        subTotal: "",
+        items: "",
+        checkout: "",
+        nothing: ""
+    }
+};
 const settings = {
     page: 1,
     starting: 0,
@@ -12,7 +60,9 @@ const settings = {
     tofixed: 0,
     totalItems: 0,
     totalPrice: 0,
-    percentage: 0
+    percentage: 0,
+    currentLanguageID: 0,
+    currentLanguage: textDEMO
 };
 const TVs = [];
 const cart = document.getElementById('cartNum');
@@ -117,10 +167,10 @@ function displayTV() {
                         <p>Store: ${displayTVs[i].store}</p>
                         <p class="card-view-button">
                             <a href="${displayTVs[i].url}" target="_blank">
-                                <button>View Item</button>
+                                <button>${settings.currentLanguage.products.viewItem}</button>
                             </a>
                         </p>
-                        <p class="card-cart-button"><button onclick="addToCart(${i})">Add to Cart</button></p>
+                        <p class="card-cart-button"><button onclick="addToCart(${i})">${settings.currentLanguage.products.addToCart}</button></p>
                         
                     </div>
         </div>
@@ -166,7 +216,7 @@ function checkDivide() {
     else {
         settings.divide = 1;
         settings.prefix = "";
-        settings.postfix = "DEN";
+        settings.postfix = " DEN";
         settings.tofixed = 0;
     }
 }
